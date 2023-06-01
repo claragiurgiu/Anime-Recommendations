@@ -78,8 +78,6 @@ In conclusion, the SVD model was the most successful model for collaborative fil
 ![Model Comparison](./Images/model_comparison.png)
 
 
-
-
 ### Conclusions
 
 In conclusion, the collaborative filtering recommendation system is able to predict estimated ratings with an error of 1.5 and return recommendations that a user will most likely rate highly based on their previous rating patterns and similar users' ratings of the recommendations.
