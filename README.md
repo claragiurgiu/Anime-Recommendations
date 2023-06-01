@@ -71,7 +71,7 @@ I also tried a non-negative matrix factorization (NMF) model, but it was not ver
 
 Finally, I tried a Singular Value Decomposition plus plus (SVD++) model. SVD++ is an extended version of SVD that works mostly on users' implicit and explicit ratings for the item. SVD++ was more successful than NMF, but it was not as successful as SVD.
 
-The final model was chosen based on its accuracy and performance with a RMSE of 0.9571 compared to the baseline of 2.1488.
+The final model was chosen based on its accuracy and performance with a RMSE of 0.77 compared to the baseline of 2.1488.
 
 In conclusion, the SVD model was the most successful model for collaborative filtering. The model was able to generate latent features and make accurate predictions for a wide range of users and items.
 
@@ -80,15 +80,15 @@ In conclusion, the SVD model was the most successful model for collaborative fil
 
 ### Conclusions
 
-In conclusion, the collaborative filtering recommendation system is able to predict estimated ratings with an error of 1.5 and return recommendations that a user will most likely rate highly based on their previous rating patterns and similar users' ratings of the recommendations.
+## Conclusions 
+In conclusion, the collaborative filtering recommendation system is able to predict estimated ratings with an error of 0.77 and return recommendations that a user will most likely rate highly based on their previous rating patterns and similar users' ratings of the recommendations.
 Overall, collaborative filtering is a powerful technique that can be used to recommend anime to users. However, it is important to be aware of the limitations of the approach and to use it in conjunction with other techniques, such as content-based filtering, to provide the best possible recommendations.
 Some of the limitations of collaborative filtering:
  - Data sparsity: Collaborative filtering algorithms rely on users having rated a large number of items. However, in practice, many users only rate a small number of items. This can lead to inaccurate recommendations.
-    -  One way to overcome data sparsity is to use content-based filtering in conjunction with collaborative filtering. Content-based filtering algorithms recommend items to users based on the content of the items that the user has rated. This can help to fill in the gaps in the data that is available for collaborative filtering.
+   
  - Cold start: Collaborative filtering algorithms cannot recommend items to users who have not yet rated any items. This can be a problem for new users or users who have recently changed their interests.
-    -  A potential solution to the cold start problem is to use a hybrid approach that combines collaborative filtering with content-based filtering. In this approach, the algorithm first uses content-based filtering to recommend items to the new user. The algorithm then uses collaborative filtering to refine the recommendations by taking into account the ratings of other users.
+   
  - Bias: Collaborative filtering algorithms can be biased by the ratings of other users. For example, if a user only rates popular items, the algorithm will recommend other popular items to that user, even if the user might prefer less popular items.
-    - One way to overcome bias is to use a variety of collaborative filtering algorithms and to combine their results. This can help to reduce the impact of any individual algorithm's biases.
 
 ## Next Steps
 * Scrape more recent data
