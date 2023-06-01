@@ -27,7 +27,7 @@ The recommendation system will help anime fans save time by discovering new genr
 
 ## Data Understanding
 
-I used data scraped from MyAnimeList.net, which includes several features of the anime show, as well as user ratings. The data is available for download from [Kaggle.com](https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database/versions/1?resource=download). The main dataset is a CSV file containing a list of 19, 311 shows with features such as title, synopsys, genre, and number of episodes. The second dataset has 7,813,737 rows of users rating different anime shows.
+I used data scraped from MyAnimeList.net, which includes several features of the anime show, as well as user ratings. The data is available for download from [Kaggle.com](https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database/versions/1?resource=download). The main dataset is a CSV file containing a list of 19, 311 shows with features such as title, synopsys, genre, and number of episodes. The second dataset has 7,813,737 rows of users rating different anime shows. The cleaned version of the dataset is compressed in a zip folder. All datasets can be found in the Data folder [here](https://github.com/claragiurgiu/Anime-Recommendations/tree/main/Data).
 
 ## Data Preparation
 
@@ -46,7 +46,7 @@ Removing missing rating: The Rating.csv dataset had 1,476,496 shows that were mi
 ## Methods and Models
 
 For the recommendation systems in this project, I used a content-based approach and a collaborative filtering approach. 
-One of the drawbacks of recommendation engines is the cold-start issue for new users. To overcome this, I built two content-based systems. One uses the genre of a show to return shows with similar genre and the second option uses other features of the show such as genre, number of episodes and score to return similar shows. 
+One of the drawbacks of recommendation engines is the cold-start issue for new users. To overcome this, I built two content-based systems. One uses the description of a show to return shows with similar descriptions and the second option uses other features of the show such as genre, number of episodes and score to return similar shows. 
 
 **Content Based - Synopsis**
 
@@ -71,7 +71,7 @@ I also tried a non-negative matrix factorization (NMF) model, but it was not ver
 
 Finally, I tried a Singular Value Decomposition plus plus (SVD++) model. SVD++ is an extended version of SVD that works mostly on users' implicit and explicit ratings for the item. SVD++ was more successful than NMF, but it was not as successful as SVD.
 
-The final model was chosen based on its accuracy and performance. 
+The final model was chosen based on its accuracy and performance with a RMSE of 0.9571 compared to the baseline of 2.1488.
 
 In conclusion, the SVD model was the most successful model for collaborative filtering. The model was able to generate latent features and make accurate predictions for a wide range of users and items.
 
