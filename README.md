@@ -1,6 +1,6 @@
 # Anime-Recommendation-Systems
 <p align="center">
-    <img width="460" height="300" src="https://api.time.com/wp-content/uploads/2020/12/best-anime-series-on-netflix-2.jpg">
+    <img width="760" height="405" src="https://wallpaperaccess.com/full/39033.png">
 </p>
 
 **Author**: Clara Giurgiu
@@ -12,18 +12,36 @@ This project aims to build an anime recommendation system for new members and cu
 
 ## Business Understanding
 
-The anime industry is a rapidly growing market, with new shows being released all the time. This can make it difficult for anime fans to find new shows to watch that they will enjoy. Additionally, most streaming services do not offer personalized recommendations, which can lead to users wasting time scrolling through an endless list of shows that they are not interested in.
-With this project, I aim to build a recommendation system that will help anime fans discover new shows that they will enjoy. The recommendation system will use a variety of factors to make recommendations, including the user's past viewing history, the user's ratings of other shows, and the user's genre preferences. 
-This recommendation system  will give a curated list to its users based on content preference and similar user's pick that will save time and provide a superb experience both novel and familiar to users. 
+The anime industry is growing rapidly, with new shows being released all the time. This can make it difficult for anime fans to find new shows to watch that they will enjoy. Other general content streaming services such as Netflix, which has one of the best recommendation systems, has a substantial anime database as well as coming up with their very own productions. To keep up, anime streaming services should strive to use the technology available to keep improving their recommendations and in turn retain their viewers and market to new ones.
+
+This project aims to build a recommendation system that will help anime fans discover new shows that they will enjoy. The recommendation system will provide a curated list of shows to users based on their content preferences and similar user's picks. The system will use a variety of factors to make its recommendations, including:
+
+- The user's past viewing history
+- The user's ratings of other shows
+- The ratings of other users who have similar viewing habits
+- The genre of the show
+- Number of episodes the show has
+
+The recommendation system will help anime fans save time by discovering new genres of anime and finding shows that are similar to their favorites. Anime fans will no longer have to spend hours searching for new shows to watch, as the recommendation system will suggest shows based on their past viewing history and the ratings of other users who have similar viewing habits. The system will also help anime fans discover new genres of anime that they may not have considered watching before. Additionally, the recommendation system will help anime fans find shows that are similar to their favorites, by suggesting other shows that are similar in tone, style, or genre.
+
 
 ## Data Understanding
 
-I used data scraped from MyAnimeList.net, which includes several features of the anime show, as well as user ratings. The data is available for download from [Kaggle.com](https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database/versions/1?resource=download). The main dataset is a CSV file containing a list of 12,294 shows with features such as title, genre, and number of episodes. The second dataset has 7,813,737 rows of users rating different anime shows.
+I used data scraped from MyAnimeList.net, which includes several features of the anime show, as well as user ratings. The data is available for download from [Kaggle.com](https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database/versions/1?resource=download). The main dataset is a CSV file containing a list of 19, 311 shows with features such as title, synopsys, genre, and number of episodes. The second dataset has 7,813,737 rows of users rating different anime shows.
 
 ## Data Preparation
 
-The datasets used for this project were sourced from Kaggle and there was not a significant amount of cleaning needed before modeling. 
-Most of the cleaning and preparation consited of removing nulls, duplicate entries and removing irrelevant columns. 
+The datasets used for this project were sourced from Kaggle. The datasets were in a good state and did not require a significant amount of cleaning before modeling.
+
+The following steps were taken to clean and prepare the data:
+
+Duplicates: I removed duplicates in the Animes.csv dataset. 
+
+Null values: There were a few nulls in the Animes.csv dataset in the *synopsis*, *episodes*, *ranked*,  and *score* columns. I dropped the nulls in synopsis and episodes and I replaced ranked and score with the mean values in those columns
+
+Column names: Column names were formatted for visualization purposes.
+
+Removing missing rating: The Rating.csv dataset had 1,476,496 shows that were missing a rating and removed for modeling purposes. The final dataset contained 6,337,241 entries. 
 
 ## Methods and Models
 
